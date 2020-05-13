@@ -1,0 +1,21 @@
+<%- include ('../partials/header') %>
+<div class="container">
+	<div style="width:30%; margin:200px  auto ;">
+	<div class="row">
+	<div class="card text-white bg-danger" style="max-width: 50rem;">
+  <div class="card-header" style="text-center">MOVIEMATE</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title"> PLEASE SEARCH FOR YOUR  FAVOURITE MOVIES </h5>
+<form action="/results" method="GET">
+	<div class="form-group">
+	<input  class="form-control"type="text" placeholder="search term" name="search">
+	</div>
+	<button class="btn-xs btn-primary btn-danger margin:auto">
+	<a href="/results">Search Here</a>
+  </button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<%- include ('../partials/footer') %>		

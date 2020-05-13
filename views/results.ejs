@@ -1,0 +1,26 @@
+<%- include ('../partials/header') %>
+<div class="container">
+	<div style="width:30%; margin:200px  auto ;">
+	<div class="row">
+	<div class="card text-white bg-danger" style="max-width: 50rem;">
+  <div class="card-header" style="text-center">MOVIEMATE</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title"> YOUR FAVOURITE MOVIES ARE AS FOLLOWS:-</h5>
+<div class="container">
+<div class="row">		
+<% data["Search"].forEach(function(movie){ %>
+<li><%= movie["Title"]  %> - <%= movie["Year"] %></li>
+<% }) %>
+		</div>	
+	</div>	
+<button class="btn-xs btn-primary btn-danger margin:auto">
+	<a href="/">Search Again</a>
+</button>
+	  </div>
+</div>
+</div>
+</div>
+</div>
+<%- include ('../partials/footer') %>		
+
+       
