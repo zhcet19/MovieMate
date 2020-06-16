@@ -7,13 +7,14 @@ var flash= require("connect-flash");
 const request = require('request');
 var LocalStrategy= require("passport-local")
 var passportLocalMongoose= require("passport-local-mongoose")
-
+//mongodb://localhost:27017/auth_demo_app
 var app= express();
-app.use(bodyParser.urlencoded({extended:true}));
+
 app.set("view engine","ejs");
 app.use(express.static(__dirname +"/public"));
 app.use(flash());
-mongoose.connect('mongodb://localhost:27017/auth_demo_app', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://faizamu:<faizamu@19>@cluster2-pc71z.mongodb.net/<dbname>?retryWrites=true&w=majority');
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(require("express-session")(
 	{
 		secret:"i am not a lier",
