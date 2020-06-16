@@ -1,21 +1,23 @@
-<%- include ('../partials/header') %>
+<%- include ('partials/header') %>
 <div class="container">
 	<div style="width:30%; margin:200px  auto ;">
 	<div class="row">
 	<div class="card text-white bg-danger" style="max-width: 50rem;">
-  <div class="card-header" style="text-center">MOVIEMATE</div>
+		<div class="card-header" style="margin-left:80px "><h1>MOVIEMATE</h1></div>
   <div class="card-body text-primary">
     <h5 class="card-title"> PLEASE SEARCH FOR YOUR  FAVOURITE MOVIES </h5>
 <form action="/results" method="GET">
 	<div class="form-group">
-	<input  class="form-control"type="text" placeholder="search term" name="search">
+	<input  class="form-control"type="text" placeholder="Enter Label or Name of Film" name="search" required>
 	</div>
-	<button class="btn-xs btn-primary btn-danger margin:auto">
-	<a href="/results">Search Here</a>
-  </button>
+	<div class="form-group">
+	<input  class="form-control"type="text" placeholder="Enter Year " name="year">
+	</div>
+	<input type="submit"style="margin-left:150px">
+
 </form>
 </div>
 </div>
-</div>
-</div>
-<%- include ('../partials/footer') %>		
+		</div>
+	</div></div>
+<%- include ('partials/footer') %>

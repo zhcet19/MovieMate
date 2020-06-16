@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+	<title> MOVIEMATE</title>
+   
+		<link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet"  href="/stylesheets/main.css">
+   		<style>
+ #special {
+	  background:url(https://images.newsx.com/wp-content/uploads/2018/12/Top-grossers-of-Hollywood.jpg)
+    
+         
+	}
+			#special{
+				 background-size:cover;
+			}		
+	.display-3{
+    
+          font-weight:bold;
+          
+
+         }
+		.text{
+				font-weight:bold;
+			    color:black;
+			}			
+         .display-3:first-letter{
+          font-size:100px;
+          text-transform:uppercase;
+         }
+	
+	footer {
+                text-align: center;
+                padding: 6px;
+               background-color:black;
+             color: white;
+             margin-top:220px
+		    
+	}
+.l{ 
+	color:red
+				
+			}
+			.special{
+				text-align:center;
+				font-weight:bold;
+				margin-top:150px;
+			}
+	
+</style>
+	</head>
+	<body>
+<nav class="navbar navbar-default " style="margin-bottom:0px">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">MOVIEMATE</a>			
+		</div>
+		<div class="collapse navbar-collapse">
+			 <ul class="nav navbar-nav navbar-right">
+		<% if(!currentUser){ %>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Sign Up</a></li>
+		<%}	else  {%>
+			<li><a href="#"> Currently Signed as <%= currentUser.username %></a></li>	 
+            <li><a href="/logout">SignOut</a></li>
+		<%	}	%> 
+        </ul>
+		</div>
+  </div>
+		</nav>
+		<div class="container">
+		<%  if(error && error.length >0){ %>
+			<div  class="alert alert-danger" role="alert">
+			<%= error %>
+		    </div>
+		<% } %>	
+			<%  if(success && success.length >0){ %>
+			<div  class="alert alert-success" role="alert">
+			<%= success %>
+		    </div>
+			<% } %>
+	</div>
+		
+
+<div id="special"class="jumbotron text-center">
+	<h1 class="display-3" style="color:red">MOVIEMATE</h1>
+<p id="lead" style="color:red"><b>We provide you solution to query all your favourite movies</b></p>
+<a role="button" class="btn btn-primary" href="/search">CLICK HERE</a>
+<a role="button" class="btn btn-success" href="https://www.omdbapi.com/">About OMDb API</a>
+</div>
+ <h1 class="special">
+	   INFORNMATION  REGARDING OUR SERVICES
+		</h1>		
+<div class="container" style="margin-top:100px">
+  <div class="row">
+    <div class="col-sm-4" >
+      <h1 class="l">OUR SERVICES</h1>
+      <p class="text"> We provides RESTful web service to obtain movie information, all content and images on the site are contributed and maintained by our users.
+
+              If you find this service useful, please consider making a one-time donation or become a patron.</p>
+    </div>
+    <div class="col-sm-4">
+      <h1 class="l">OUR SPONSERS</h1>
+      <p class="text">Emby, Trakt, FileBot, Cordcutting.com, Reelgood, Xirvik Servers, Yidio, Indexed, mi.tv, Couchpop, Key Video, What's on Netflix, iFlicks, Paper Leaf, Edu Reviewer, CraftResumes, Flixboss, DVD Lady etc</p>
+    </div>
+	  <div class="col-sm-4">
+      <h1 class="l">HOW TO USE US</h1>
+      <p class="text">Using us is very simple.Just go to Click Here option on jumbotron and enter the label of movie you want to serch and click sumbit.You will get all infornmation regarding the movies from its year of release,to its actors and directors etc..</p>
+    </div>
+  </div>
+</div>		
+		
+		
+		
+		
+<footer>
+  <p> Copyright reserved by faiz<br>
+  <a href="https://www.gmail.com"> Mail to:www.gmail.com</a></p>
+</footer>
+		
+</body>
+	
+  </html>	

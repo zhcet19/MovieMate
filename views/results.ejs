@@ -1,26 +1,90 @@
-<%- include ('../partials/header') %>
-<div class="container">
-	<div style="width:30%; margin:200px  auto ;">
-	<div class="row">
-	<div class="card text-white bg-danger" style="max-width: 50rem;">
-  <div class="card-header" style="text-center">MOVIEMATE</div>
-  <div class="card-body text-primary">
-    <h5 class="card-title"> YOUR FAVOURITE MOVIES ARE AS FOLLOWS:-</h5>
-<div class="container">
-<div class="row">		
-<% data["Search"].forEach(function(movie){ %>
-<li><%= movie["Title"]  %> - <%= movie["Year"] %></li>
-<% }) %>
-		</div>	
-	</div>	
-<button class="btn-xs btn-primary btn-danger margin:auto">
-	<a href="/">Search Again</a>
+<%- include ('partials/header') %>
+<div>
+	<% if(data["Response"]==='True'){ %>
+<table class="table table-hover">
+  <thead>
+    <tr>
+		<th scope="col" style="text-align:center margin:auto"><i >MOVIEMATE</i></th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-danger">
+      <th scope="row">MOVIENAME:-</th>
+      <td class="table-danger"><%= data["Title"] %></td>
+     
+    </tr>
+    <tr class="table-danger">
+      <th scope="row">RELEASED ON:-</th>
+      <td class="table-danger"><%= data["Released"] %></td>
+      
+    </tr>
+    <tr class="table-danger">
+      <th scope="row">LANGUAGES:-</th>
+      <td><%= data["Language"] %></td>
+      
+    </tr>
+	  <tr class="table-danger">
+      <th scope="row">TYPE:-</th>
+      <td class="table-danger"><%= data["Genre"] %></td>
+      
+    </tr>
+	   <tr class="table-danger">
+      <th scope="row">PLOT:-</th>
+      <td class="table-danger"><%= data["Plot"] %></td>
+      
+    </tr>
+	  <tr class="table-danger">
+      <th scope="row">DIRECTOR:-</th>
+      <td class="table-danger"><%= data["Director"] %></td>
+      
+    </tr>
+	  <tr>
+	  <tr class="table-danger">
+      <th scope="row">WRITER:-</th>
+      <td class="table-danger"><%= data["Writer"] %></td>
+      
+    </tr>
+	   <tr class="table-danger">
+      <th scope="row">ACTORS:-</th>
+      <td class="table-danger"><%= data["Actors"] %></td>
+    </tr>
+	  <tr class="table-danger">
+      <th scope="row">COUNTRY:-</th>
+      <td class="table-danger"><%= data["Country"] %></td>
+    </tr>
+	   <tr class="table-danger">
+      <th scope="row">AWARDS:-</th>
+      <td class="table-danger"><%= data["Awards"] %></td>
+    </tr>
+	    <tr class="table-danger">
+      <th scope="row">RATINGS:-</th>
+      <td class="table-danger"><%= data["imdbRating"]+"/10.0"%></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div style="margin-left:600px">
+	
+<button class="btn-lg btn-primary btn-success margin:auto">
+	<a href="/search">Search Again</a>
 </button>
-	  </div>
+</div>
+
+<%}	else  {%>
+<div style="margin-top:200px">
+  <h1 style="text-align:center ">
+	  MOVIE NOT FOUND !!!PLEASE SEARCH AGAIN**
+</h1>
+<div style="margin-left:600px">
+	
+<button class="btn-lg btn-primary btn-success">
+	<a href="/search">Search Again</a>
+</button>
 </div>
 </div>
-</div>
-</div>
-<%- include ('../partials/footer') %>		
+<% } %>	
+<%- include ('partials/footer') %>		
 
        

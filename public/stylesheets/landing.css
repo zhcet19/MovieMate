@@ -1,0 +1,146 @@
+body {
+
+  background-color: #000;
+
+}
+#landing-header {
+
+  z-index: 1;
+
+  position: relative;
+
+  text-align: center;
+
+  padding-top: 40vh;
+
+}
+
+#landing-header h1 {
+
+  color: #fff;
+
+}
+.slideshow { 
+
+  position: fixed;
+
+  width: 100%;
+
+  height: 100%;
+
+  top: 0;
+
+  left: 0;
+
+  z-index: 0;
+
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+
+
+.slideshow li { 
+
+  width: 100%;
+
+  height: 100%;
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  background-size: cover;
+
+  background-position: 50% 50%;
+
+  background-repeat: no-repeat;
+
+  opacity: 0;
+
+  z-index: 0;
+
+  animation: imageAnimation 50s linear infinite; 
+
+}
+
+.slideshow li:nth-child(1) { 
+
+  background-image: url(https://media1.mensxp.com/media/content/2017/Sep/upcoming-hollywood-movies-you-shouldnt-miss-1400x653-1505901970_1100x513.jpg) 
+
+}
+
+.slideshow li:nth-child(2) { 
+
+  background-image: url(https://images.newsx.com/wp-content/uploads/2018/12/Top-grossers-of-Hollywood.jpg);
+
+  animation-delay: 10s; 
+
+}
+
+.slideshow li:nth-child(3) { 
+
+  background-image: url(https://i.ytimg.com/vi/EAos6z2e9H8/maxresdefault.jpg);
+
+  animation-delay: 20s; 
+
+}
+
+.slideshow li:nth-child(4) { 
+
+  background-image: url(https://i1.wp.com/www.moviescut.com/wp-content/uploads/2012/12/10-Best-Hollywood-Movie-of-2012.jpg?fit=1024%2C576&ssl=1);
+
+  animation-delay: 30s; 
+
+}
+
+.slideshow li:nth-child(5) { 
+
+  background-image: url(http://1.bp.blogspot.com/-reBBkb1HR_c/URzgE58MXlI/AAAAAAAACPc/jQY1DYIVGgM/s1600/hollywood+movies+wallpapers36.jpg);
+
+  animation-delay: 40s; 
+
+}
+@keyframes imageAnimation { 
+
+  0% { 
+
+    opacity: 0; 
+
+    animation-timing-function: ease-in;
+
+  }
+
+  10% {
+
+    opacity: 1;
+
+    animation-timing-function: ease-out;
+
+  }
+
+  20% {
+
+    opacity: 1
+
+  }
+
+  30% {
+
+    opacity: 0
+
+  }
+
+}
+.no-cssanimations .slideshow li {
+
+    opacity: 1;
+
+}
+
