@@ -6,14 +6,18 @@ var User= require("./models/user")
 var flash= require("connect-flash");
 const request = require('request');
 var LocalStrategy= require("passport-local")
-var passportLocalMongoose= require("passport-local-mongoose")
-//mongodb://localhost:27017/auth_demo_app
-var app= express();
 
+var passportLocalMongoose= require("passport-local-mongoose")
+var app= express();
 app.set("view engine","ejs");
 app.use(express.static(__dirname +"/public"));
 app.use(flash());
-mongoose.connect('mongodb+srv://faizamu:faizalam@fcluster-vei30.mongodb.net/<dbname>?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true});
+
+var url= process.env.DATABASEURL|| "mongodb://localhost:27017/auth_demo_app"
+mongoose.connect(url,{useNewUrlParser: true, useUnifiedTopology: true});
+//mongodb+srv://faizamu:faizalam@fcluster-vei30.mongodb.net/<dbname>?retryWrites=true&w=majority
+
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(require("express-session")(
 	{
