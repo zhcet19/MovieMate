@@ -13,7 +13,7 @@ var app= express();
 app.set("view engine","ejs");
 app.use(express.static(__dirname +"/public"));
 app.use(flash());
-mongoose.connect('mongodb+srv://faizamu:<faizamu@19>@cluster2-pc71z.mongodb.net/<dbname>?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://faizamu:faizalam@fcluster-vei30.mongodb.net/<dbname>?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true});
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(require("express-session")(
 	{
