@@ -1,4 +1,4 @@
-# Moviefinder
+# MovieMate
 An app that assist you to find your favourite movies in one go just by clicking just few words.
 
 MovieMate is a platform that provides all solutions to the problem of movie searching ,regarding its reviews,awards won,actors,director,writers,its world-wide collections etc.
