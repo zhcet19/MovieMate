@@ -15,7 +15,7 @@ app.use(flash());
 
 var url= process.env.DATABASEURL|| "mongodb://localhost:27017/auth_demo_app"
 mongoose.connect(url,{useNewUrlParser: true, useUnifiedTopology: true});
-//mongodb+srv://faizamu:faizalam@fcluster-vei30.mongodb.net/<dbname>?retryWrites=true&w=majority
+
 
 
 app.use(bodyParser.urlencoded({extended:true}));
