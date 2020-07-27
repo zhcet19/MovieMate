@@ -11,3 +11,25 @@ The OMDb API is a RESTful web service to obtain movie information, all content a
 
 
 # preview
+
+
+![alt text](https://github.com/zhcet19/MovieMate/blob/master/pictures/picture4.png)
+
+
+
+
+![alt text](https://github.com/zhcet19/MovieMate/blob/master/pictures/picture3.png)
+
+
+
+
+
+
+![alt text](https://github.com/zhcet19/MovieMate/blob/master/pictures/picture1.png)
+
+
+
+
+
+![alt text](https://github.com/zhcet19/MovieMate/blob/master/pictures/picture2.png)
+
